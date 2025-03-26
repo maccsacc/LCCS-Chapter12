@@ -1,0 +1,18 @@
+def checkPart(movement,shouldIt):
+    if movement == 1:
+        if shouldIt == 1:
+            return("All good, no need to check!")
+        else:
+            return("Apply tape to hinder movement.")
+    if movement == 0:
+        if shouldIt == 0:
+            return("All good, no need to check!")
+        else:
+            return("Lubricate the part with WD40.")
+        
+movement = int(input("Is the part moving? 1 for yes, 0 for no : "))
+shouldIt = int(input("Should the part be moving? 1 for yes, 0 for no. : "))
+
+doIcheck = checkPart(movement,shouldIt)
+print(doIcheck)
+               
