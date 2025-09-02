@@ -1,0 +1,12 @@
+userList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+
+for i in userList:
+    if i %2 == 0:
+        print(f'{i} is even!')
+
+cars = ["vw", "bmw", "kia", "ford"]
+print(len(cars))
+for i in range (len(cars)):
+    if i == 2:
+        print(cars[i])
+    
