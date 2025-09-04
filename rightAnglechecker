@@ -1,0 +1,10 @@
+stickC = int(input("Enter the length of the longest stick: "))
+stickA = int(input("Enter the length of the shortest stick: "))
+stickB = int(input("Enter the lenght of the last stick: "))
+
+stickAng = stickB**2 + stickA**2
+
+if stickAng == stickC**2:
+    print("Yes! Right angle triangle!")
+else:
+    print("Uh oh! Not a right angle!")
