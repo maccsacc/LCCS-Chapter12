@@ -1,0 +1,66 @@
+def piVal(lampShade, hedgeHog):
+    print(lampShade/hedgeHog)
+
+def happyBirthday():
+    print("Happy Birthday!")
+
+def multi(lampShade, hedgeHog):
+    print(lampShade*hedgeHog)
+     
+def expo(bNum, iNum):
+    print(bNum**iNum)
+    
+def is_leap_year(y):
+    if (y % 100 == 0) or ((y % 4 ==0) and (y % 100 != 0)):
+        return True
+    else:
+        return False
+    
+def poolSize(x, y, z):
+    print(x*y*z)
+    
+def emailValid():
+    if (emailIn.count("@")) == 1 and (emailIn.count(".")) >= 1 and (len(emailIn) >= 8):
+        return True
+    else:
+        return False
+# w = int(input("What's the width?: "))
+# d = int(input("What's the depth?: "))
+# l = int(input("What's the length?: "))
+# 
+# poolSize(x = w, y = d, z = l)
+
+# year = int(input("What year is it?: "))
+# if is_leap_year(year):
+#     print(year, "is a leap year!")
+# else:
+#     print(year, "is not a leap year!")
+
+    
+
+# u = int(input("Enter the base number: "))
+# v = int(input("Enter the indice: "))
+# 
+# expo(bNum = u, iNum = v)
+
+#
+# for i in range (3):
+#     happyBirthday()
+#
+# x = int(input("What number are you dividing?: "))
+# y = int(input("And what are you dividing it by?: "))
+# 
+# piVal(lampShade = x, hedgeHog = y)
+# 
+
+# x = int(input("What number are you multiplying?: "))
+# y = int(input("And the next?: "))
+# 
+# multi(lampShade = x, hedgeHog = y)
+# 
+# emailIn = str(input("Enter your email: "))
+# 
+# if emailValid():
+#     print("Valid Email")
+# else:
+#     print("Invalid Email")
