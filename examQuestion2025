@@ -1,0 +1,65 @@
+## Question 16 (a)
+# Examination Number: 146982
+
+def get_grade(result):
+    grade = ("Unsuccessful")
+
+    if result >= 80:
+        grade = "Distinction"
+    elif result >= 65:
+        grade = "Upper Merit"
+    elif result >= 50:
+        grade = "Lower Merit"
+    elif result >= 40:
+        grade = "Merit"
+    return grade
+    
+#(iii) completed the grading system
+
+
+# Calculate and display the mean of a list of results
+
+results = [39, 32, 62, 88, 51, 62, 64, 81, 77]  # Initialise the list
+N = len(results)  # Initialise N to the number of results
+total = 0         # Initialise the running total to 0
+
+#Loop N times
+for i in range(N):
+    total = total + results[i]  # Running total
+
+
+# Divide by the total number of results to give the mean
+arithmetic_mean = total / N #(ii) dividing by N to always have the length of the list divide the number
+endResult = round(arithmetic_mean, 2) #(i) rounding the result to two decimal points
+lowestScore = max(results)
+highestScore = min(results)
+count1 = 0
+count2 = 0
+
+for i in results: #(vi) counting the items in results and adding it up
+    if i <= 40:
+        count1 += 1
+    elif i >= 50 and i <= 79:
+        count2 += 1
+longest_run = []
+current_run = [results[0]]
+
+for i in range(1, N) :
+    if results[i] > results[i - 1]:
+        current_run.append (results [i])
+    else:
+        if len(current_run) > len(longest_run) :
+            longest_run = current_run
+            current_run = [results[i]]
+if len(current_run) > len(longest_run):
+    longest_run = current_run
+
+
+# Display the answer
+print("The mean percentage mark is", endResult)
+print("The grade for the average result is", get_grade(endResult))
+print("The lowest score is", lowestScore)
+print("The highest score is", highestScore)
+print("The number of scores below 40 is", count1)
+print("The number of scores between 50 and 79 inclusive is", count2)
+print("Longest run of result increases is", longest_run)
