@@ -1,0 +1,42 @@
+
+names = ["Ava", "Ben", "Ciara", "Dara", "Eoin", "Fiona"]
+scores = [88, 54, 72, 39, 100, 67]
+passes = [] #creating an empty list to append passed students to
+
+def grade_band(score): #defining a function to assess their grade band
+    if score <= 100 and score >= 90:
+        return "A"
+    elif score <= 89 and score >= 80:
+        return "B"
+    elif score <= 79 and score >= 70:
+        return "C"
+    elif score <= 69 and score >= 60:
+        return "D"
+    elif score <= 59 and score >= 40:
+        return "E"
+    else:
+        return "F"
+    
+
+def passed(score): #defininf a function to assess if they passed and appending their name to the "passes" list
+    if score >= 40:
+        passes.append(names[scores.index(score)])
+        return True
+    else:
+        return False
+print("-" * 30)
+print("Name: \tScore: \tGrade: \tPass?")
+for i in range(len(names)): #using previously defined functions and lists to print the name, score, grade band and pass status
+    print(names[i], "\t",scores[i],"\t", grade_band(scores[i]),"\t", passed(scores[i]))
+    
+print("\nSummary") #summary of results
+print("-------")
+print(f"Students: {names}")
+print(f"Average: {(sum(scores))/(len(scores))}")
+print("Highest:",max(scores))
+print("Lowest:",min(scores))
+print("Passed:", passes)
+
+
+
+
