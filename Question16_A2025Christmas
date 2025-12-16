@@ -1,0 +1,19 @@
+# Question 16(a)
+# Student name: Daniel Ó'Mathúna
+import random
+
+def dice_game(): #(iv) added dice game function with a printed introduction
+    print("welcome to my dice game!!")
+    your_name = input("Please enter your name: ")
+    lucky_number = int(input("Please select a lucky number between 1 and 6: "))#(ii)created a user input for the lucky number
+    computer_die_roll = random.randint(1,6) #(i)initialize computer number
+    print(f"{your_name}'s lucky number was: {lucky_number}") #(iii)added a line to print your added lucky number
+    print("The computer rolled: ",computer_die_roll)
+    if lucky_number < computer_die_roll:
+        print("You guessed too low!")
+    elif lucky_number > computer_die_roll:
+        print("You guessed too high!")
+    else:
+        print("You guessed correct, well done!")
+
+dice_game()
