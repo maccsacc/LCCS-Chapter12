@@ -1,0 +1,35 @@
+#Question 16(b)
+#Student name: Daniel Ó'Mathúna
+import random
+ticket = []
+Winner = 1
+
+def ticket_compare():
+    for i in range(3):
+        if ticket[i-1] == result[i-1]:
+            winner = 1
+        else:
+            winner = 0
+    if winner == 1:
+        print("You win!")
+    else:
+        print("You lose!")
+            
+
+while len(ticket) < 3:
+    user_number = int(input("Please pick a number between 1 and 10: "))
+    ticket.append(user_number)
+	
+print("Your ticket is: ",ticket)
+print("The draw will start now, good luck!")
+drum = [1,2,3,4,5,6,7,8,9,10]
+result = []
+def lotto():
+    for i in range(3):
+        draw = drum[random.randint(0,len(drum))-1]
+        drum.remove(draw)
+        result.append(draw)	
+    print("The draw was: ",result)
+
+lotto()
+ticket_compare()
