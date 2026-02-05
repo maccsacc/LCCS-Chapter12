@@ -1,0 +1,19 @@
+#Enter your name here: Daniel O'Mahony
+
+positive_reviews = []
+negative_reviews = []
+
+while True:
+    x = input("Please enter a rating from 1 - 5: ")
+    if x == ("done"):
+        break
+    
+    elif x > 2:
+        positive_reviews.append(x)
+
+    elif x < 3:
+        negative_reviews.append(x)
+
+print("The negative reviews are: ", negative_reviews)
+print("The positive reviews are: ", positive_reviews)
+
