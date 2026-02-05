@@ -1,0 +1,32 @@
+#Question16_A_HL
+#Enter your name here: Daniel O'Mahony
+
+print("Welcome to my feedback tracker")
+
+ratings = []
+ratingsfix = []
+fivestarcount = 0
+
+while True:
+    ratings.append(int(input("Please enter a rating from 1 - 5"))) #(i)Appending each value to the empty list until it reaches a length of 5 ratings
+    if int(input("Enter -1 to stop")) == (-1): #(v) checks if the user wants to stop and breaks the loop if -1 is inputted
+        break
+    else:
+        pass
+
+for i in range(len(ratings)-1):
+    if ratings[i] <= 5 and ratings[i] >= 1:
+        ratingsfix.append(ratings[i])
+
+
+for i in range(len(ratings)-1):
+    if ratings[i] == 5:
+        fivestarcount += 1 #(iii) creating a variable to count the amount fo times 5 appears in the list
+
+
+
+
+print(round(sum(ratingsfix)/len(ratingsfix), 3)) #(ii)getting the sum of all ratings and dividing them by the length
+print("The list of ratings is:", ratingsfix.sort)
+print(fivestarcount)
+
